@@ -8,8 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
-    <Folder Include="Models\" />
     <Folder Include="Observers\" />
     <Folder Include="Subjects\" />
   </ItemGroup>
