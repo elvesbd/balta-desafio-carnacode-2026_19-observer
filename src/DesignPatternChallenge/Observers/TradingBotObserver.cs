@@ -11,11 +11,11 @@ public class TradingBotObserver(string botName, decimal buyThreshold, decimal se
     
     public void Update(StockPriceChange priceChange)
     {
-        Console.WriteLine($"  → [Bot {BotName}] 🤖 Analisando {priceChange.Symbol}...");
+        Console.WriteLine($"  → [Bot {BotName}] Analisando {priceChange.Symbol}...");
 
         if (priceChange.ChangePercent <= -BuyThreshold)
-            Console.WriteLine($"  → [Bot {BotName}] COMPRANDO {priceChange.Symbol} por R$ {priceChange.NewPrice:N2}");
+            Console.WriteLine($"→ [Bot {BotName}] COMPRANDO {priceChange.Symbol} por R$ {priceChange.NewPrice:N2}");
         else if (priceChange.ChangePercent >= SellThreshold)
-            Console.WriteLine($"  → [Bot {BotName}] VENDENDO {priceChange.Symbol} por R$ {priceChange.NewPrice:N2}");
+            Console.WriteLine($"→ [Bot {BotName}] VENDENDO {priceChange.Symbol} por R$ {priceChange.NewPrice:N2}");
     }
 }
